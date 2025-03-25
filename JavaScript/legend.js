@@ -11,7 +11,7 @@ function updateLegend() {
     // 注意：这里的 src 需要替换为实际 Taxi 图标的地址
     legendPanel.innerHTML += `
       <div class="legend-item">
-        <img src="/Data/Taxi/Taxi.png" alt="Taxi Icon" style="width:20px;height:20px;vertical-align:middle;">
+        <img src="Data/Taxi/Taxi.png" alt="Taxi Icon" style="width:20px;height:20px;vertical-align:middle;">
         <span> Taxi Distribution</span>
       </div>
     `;
@@ -41,7 +41,7 @@ function updateLegend() {
     // 替换 src 为实际的交通事故图标地址
     legendPanel.innerHTML += `
       <div class="legend-item">
-        <img src="/Data/Incidents/incidents.png" alt="Traffic Accident Icon" style="width:20px;height:20px;vertical-align:middle;">
+        <img src="Data/Incidents/incidents.png" alt="Traffic Accident Icon" style="width:20px;height:20px;vertical-align:middle;">
         <span> Traffic Accident</span>
       </div>
     `;
@@ -52,7 +52,7 @@ function updateLegend() {
     // 替换 src 为实际的 Camera 图标地址
     legendPanel.innerHTML += `
       <div class="legend-item">
-        <img src="/Data/Cameras/camera.png" alt="Camera Icon" style="width:20px;height:20px;vertical-align:middle;">
+        <img src="Data/Cameras/camera.png" alt="Camera Icon" style="width:20px;height:20px;vertical-align:middle;">
         <span> Camera Distribution</span>
       </div>
     `;
