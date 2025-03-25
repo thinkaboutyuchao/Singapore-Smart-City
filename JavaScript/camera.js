@@ -13,7 +13,7 @@ function fetchCameraData() {
                                 map: cameraLayerVisible ? map : null,  // 只有在 cameraLayerVisible=true 时才显示
                                 title: `摄像头 ID: ${camera.camera_id}`,
                                 icon: {
-                                    url: "Data/Cameras/camera.png",
+                                    url: "../Data/Cameras/camera.png",
                                     scaledSize: new google.maps.Size(30, 30),
                                 },
                             });
