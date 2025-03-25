@@ -1,0 +1,184 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* 确保 html 和 body 占满全屏 */
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* 页面主体 */
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 标题 */
+  h2 {
+    font-size: 24px;
+    margin: 15px;
+    text-align: center;
+  }
+  
+  /* 地图容器 */
+  .map-container {
+    position: relative; /* 让子元素（天气面板）相对于此定位 */
+    width: 100%;
+    height: calc(100vh - 50px); /* 减去标题的高度 */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Google 地图 */
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  
+/* 天气信息面板 */
+.weather-panel {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 295px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.99);  /* 半透明深色背景 */
+    color: #fff;                  /* 浅色文字 */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  /* 调整内部内容的样式 */
+  .weather-panel h3 {
+    margin-bottom: 10px;
+    color: #161616;   /* 确保标题颜色为白色 */
+    text-align: center;
+  }
+
+  .weather-info {
+    text-align: center;
+  }
+  .weather-info h4 {
+    margin-bottom: 20px;
+    color: #161616;   /* 细微区别的浅灰色 */
+  }
+  .weather-info img {
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  .weather-info p {
+    margin-bottom: 20px;
+    color: #161616;  /* 使用比 h3 略浅一点的颜色 */
+  }
+  
+  /* 响应式优化 */
+  @media screen and (max-width: 768px) {
+    .weather-panel {
+      width: 200px;
+      top: 5px;
+      right: 5px;
+      padding: 10px;
+    }
+  }
+
+  /* Taxi control button */
+  #LayerButton {
+    position: absolute;
+    bottom: 380px;
+    right: 2px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff; /* Green */
+    border: none;
+    color: #161616;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    z-index: 10; /* Ensure the button is above the map */
+    border-radius: 10%; /* Make the button corners rounded (circle) */
+  }
+  #LayerButton img {
+    width: 30px; /* Set image size */
+    height: 30px; /* Set image size */
+  }
+  #LayerButton:hover {
+    background-color: #fff;
+  }
+  /* Layer Panel - 改为靠左显示 */
+  #layerPanel {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    gap: 0px; /* 复选框之间的间距 */
+    position: absolute;
+    bottom: 230px;  /* 和按钮对齐 */
+    right: -240px;  /* 隐藏到按钮左侧，宽度 250px + 间距 20px */
+    width: 240px;
+    height: 200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s;
+    z-index: 30;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+  }
+  /* 复选框项样式 */
+  .checkbox-item {
+    display: flex;
+    align-items: center; /* 复选框和文字垂直居中 */
+    gap: 8px; /* 复选框和文字之间的距离 */
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+/*legend panel*/
+.legend-panel {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;  /* 确保图例面板显示在最前面 */
+  max-width: 300px;  /* 可选：限制最大宽度 */
+}
+.legend-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+/* 每个图例项 */
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* 图例项之间的间距 */
+}
+/* 图标样式 */
+.legend-item img,
+.legend-item span[style*="background-color"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px; /* 图标和文字之间的间距 */
+}
+  

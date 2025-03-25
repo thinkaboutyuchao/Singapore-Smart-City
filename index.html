@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <!-- 引入 CSS 文件 -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCVI62GQftqoy1b2f17ek1mYtju3KPz3Y&language=en&callback=initMap" async defer></script>
+</head>
+<body>
+<h2>Google Maps</h2>
+<div class="map-container">
+    <div id="map"></div>
+    <!-- Layer button -->
+    <button id="LayerButton">
+        <img src="Data/Layers/Layer.jpg">
+    </button>
+    <!-- Layers Panel -->
+    <div id="layerPanel">
+        <label class="checkbox-item"><input type="checkbox" id="taxiLayer"> Taxi Distribution</label><br>
+        <label class="checkbox-item"><input type="checkbox" id="railLayer"> Rail Station Crowd Level</label><br>
+        <label class="checkbox-item"><input type="checkbox" id="networkLayer"> Network Crowd Level</label><br>
+        <label class="checkbox-item"><input type="checkbox" id="trafficAccidentLayer"> Traffic Accident</label><br>
+        <label class="checkbox-item"><input type="checkbox" id="cameraLayer"> Camera Distribution</label>
+    </div>
+    <!-- weather panel -->
+    <div id="weather-panel" class="weather-panel"></div>
+    <!-- Legend panel -->
+    <div id="legend-panel" class="legend-panel">
+    </div>
+</div>
+
+    <!-- 引入 JavaScript 文件 -->
+    <script src="JavaScript/script.js"></script>
+    <!-- 引入 出租车 文件 -->
+    <script src="JavaScript/taxi.js"></script>
+    <!-- 引入 天气 文件 -->
+    <script src="JavaScript/weather.js"></script>
+    <!-- 引入 地铁 文件 -->
+    <script src="JavaScript/RailStation.js"></script>
+    <!-- 引入 交通事故 文件 -->
+    <script src="JavaScript/TrafficAccidents.js"></script>
+    <!-- 引入 交通摄像头 文件 -->
+    <script src="JavaScript/camera.js"></script>
+    <!-- 引入 道路拥堵 文件 -->
+    <script src="JavaScript/Network.js"></script>
+    <!-- 引入 图例加载 文件 -->
+    <script src="JavaScript/legend.js"></script>
+    
+
+</body>
+</html>
