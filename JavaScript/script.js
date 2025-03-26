@@ -220,7 +220,7 @@ document.getElementById("railLayer").addEventListener("change", function(e) {
         map.data.setMap(map);
         // 如果数据尚未加载，则加载 GeoJSON 并记录 feature 对象
         if (!railGeoJsonLoaded) {
-            map.data.loadGeoJson("https://raw.githubusercontent.com/thinkaboutyuchao/Singapore-Smart-City/refs/heads/main/Data/RailStations/RailStations.geojson", null, function(features) {
+            map.data.loadGeoJson("../Data/RailStations/RailStations.geojson", null, function(features) {
                 features.forEach(feature => {
                     // 假设每个 feature 的属性中有 "Code_for_L" 字段用于匹配
                     const code = feature.getProperty("Code_for_L");
@@ -262,7 +262,7 @@ document.getElementById("networkLayer").addEventListener("change", function (e) 
         networkData.setMap(map);
         
         if (!networkGeoJsonLoaded) {
-            const networkGeoJsonUrl = new URL("https://raw.githubusercontent.com/thinkaboutyuchao/Singapore-Smart-City/refs/heads/main/Data/NetWork/NetWork.geojson", window.location.href).href;
+            const networkGeoJsonUrl = new URL("../Data/NetWork/NetWork.geojson", window.location.href).href;
             
             networkData.loadGeoJson(networkGeoJsonUrl, null, function (features) {
                 console.log("路网 GeoJSON 加载完成，应用默认样式...");
