@@ -11,7 +11,7 @@ function updateLegend() {
     // 注意：这里的 src 需要替换为实际 Taxi 图标的地址
     legendPanel.innerHTML += `
       <div class="legend-item">
-        <img src="https://thinkaboutyuchao.github.io/Singapore-Smart-City/Data/Taxi/Taxi.png" alt="Taxi Icon" style="width:20px;height:20px;vertical-align:middle;">
+        <img src="../Data/Taxi/Taxi.png" alt="Taxi Icon" style="width:20px;height:20px;vertical-align:middle;">
         <span> Taxi Distribution</span>
       </div>
     `;

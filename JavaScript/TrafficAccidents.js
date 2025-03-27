@@ -21,7 +21,7 @@ function fetchIncidentData() {
                             map: incidentLayerVisible ? map : null,  // 只有在 incidentLayerVisible=true 时才显示
                             title: incident.Message,
                             icon: {
-                                url: "https://thinkaboutyuchao.github.io/Singapore-Smart-City/Data/Incidents/incidents.png",
+                                url: "../Data/Incidents/incidents.png",
                                 scaledSize: new google.maps.Size(30, 30),
                             },
                         });
