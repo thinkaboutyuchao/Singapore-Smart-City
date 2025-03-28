@@ -96,7 +96,7 @@
   /* Taxi control button */
   #LayerButton {
     position: absolute;
-    bottom: 380px;
+    bottom: 320px;
     right: 2px;
     width: 40px;
     height: 40px;
@@ -124,7 +124,7 @@
     flex-direction: column; /* 垂直排列 */
     gap: 0px; /* 复选框之间的间距 */
     position: absolute;
-    bottom: 230px;  /* 和按钮对齐 */
+    bottom: 170px;  /* 和按钮对齐 */
     right: -240px;  /* 隐藏到按钮左侧，宽度 250px + 间距 20px */
     width: 240px;
     height: 200px;
