@@ -21,6 +21,7 @@ function fetchCameraData() {
                             // 创建 InfoWindow 用于显示摄像头图片
                             var infoWindow = new google.maps.InfoWindow({
                                 content: `<div>
+                                            <p>Time Stamp: ${camera.timestamp}</p>
                                             <img src="${camera.image}" alt="摄像头 ${camera.camera_id}" style="width:320px;height:240px;">
                                           </div>`
                             });
