@@ -11,7 +11,7 @@ function fetchTaxiData() {
                             map: taxiLayerVisible ? map : null,  // 只有在 taxiLayerVisible=true 时才显示
                             title: "Taxi Location",
                             icon: {
-                                url: "https://maps.google.com/mapfiles/kml/shapes/cabs.png",
+                                url: "Data/Taxi/taxii.png",
                                 scaledSize: new google.maps.Size(20, 20),
                             },
                         });
