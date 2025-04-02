@@ -124,10 +124,10 @@
     flex-direction: column; /* 垂直排列 */
     gap: 0px; /* 复选框之间的间距 */
     position: absolute;
-    bottom: 170px;  /* 和按钮对齐 */
+    bottom: 150px;  /* 和按钮对齐 */
     right: -240px;  /* 隐藏到按钮左侧，宽度 250px + 间距 20px */
     width: 240px;
-    height: 200px;
+    height: 220px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
