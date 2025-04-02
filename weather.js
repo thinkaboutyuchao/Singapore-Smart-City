@@ -22,11 +22,11 @@ fetch("https://internetgisapi-e6aabmhqezhgf3b9.eastasia-01.azurewebsites.net/wea
     //Weather image
     let imageHtml = "";
     if (forecastText.includes("Cloudy")) {
-      imageHtml = `<img src="Data/Weather/Cloudy.gif" alt="Cloudy Weather" style="width:240px;height:240px;">`;
+      imageHtml = `<img src="Data/Weather/Cloudy.gif" alt="Cloudy Weather" style="width:240px;height:200px;">`;
     }else if(forecastText.includes("Showers") || forecastText.includes("Rain")){
-      imageHtml = `<img src="Data/Weather/Showers.gif" alt="Cloudy Weather" style="width:240px;height:240px;">`;
+      imageHtml = `<img src="Data/Weather/Showers.gif" alt="Cloudy Weather" style="width:240px;height:200px;">`;
     }else{
-      imageHtml = `<img src="Data/Weather/Sun.gif" alt="Cloudy Weather" style="width:240px;height:240px;">`;
+      imageHtml = `<img src="Data/Weather/Sun.gif" alt="Cloudy Weather" style="width:240px;height:200px;">`;
     }
     // 获取天气信息面板，并更新内容
     const weatherPanel = document.getElementById("weather-panel");
