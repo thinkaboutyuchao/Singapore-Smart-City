@@ -17,8 +17,8 @@ function updateLegend() {
     `;
   }
 
-  // 2 3 Rail Station Crowd Level 被选中时加载对应图标（示例）
-  if (document.getElementById('railLayer').checked || document.getElementById('networkLayer').checked) {
+  // 2 Rail Station Crowd Level 被选中时加载对应图标（示例）
+  if (document.getElementById('railLayer').checked) {
     // 替换 src 为实际的 Rail Station 图标地址
     legendPanel.innerHTML += `
       <div class="legend-item">
@@ -35,6 +35,25 @@ function updateLegend() {
       </div>
     `;
   }
+  // 3 Rail Station Crowd Level 被选中时加载对应图标（示例）
+  if (document.getElementById('networkLayer').checked) {
+    // 替换 src 为实际的 Rail Station 图标地址
+    legendPanel.innerHTML += `
+      <div class="legend-item">
+        <span style="display:inline-block;width:20px;height:20px;background-color:#2e8b57;margin-right:5px;vertical-align:middle;"></span>
+        <span>Speed Range > 60</span>
+      </div>
+      <div class="legend-item">
+        <span style="display:inline-block;width:20px;height:20px;background-color:#FFD700;margin-right:5px;vertical-align:middle;"></span>
+        <span>Speed Range > 30</span>
+      </div>
+      <div class="legend-item">
+        <span style="display:inline-block;width:20px;height:20px;background-color:#FF0000;margin-right:5px;vertical-align:middle;"></span>
+        <span>Speed Range <= 30</span>
+      </div>
+    `;
+  }
+
 
   // 4. Traffic Accident 被选中时加载 Incidents 图标
   if (document.getElementById('trafficAccidentLayer').checked) {

@@ -2,9 +2,9 @@
 function getRoadColor(speedBand) {
     const band = Number(speedBand);
     // 这里假设 SpeedBand 范围较大，根据实际情况调整临界值
-    if (band >= 8) {
+    if (band >= 7) {
         return "#2e8b57";  // 低拥堵：绿色
-    } else if (band >= 5) {
+    } else if (band >= 4) {
         return "#FFD700";  // 中等：黄色
     } else {
         return "#FF0000";  // 高拥堵：红色
